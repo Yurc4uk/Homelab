@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  logger:
+    build: .
+    restart: unless-stopped
+    container_name: esp32_logger
+    # Перевизначаємо команду, щоб запустився саме логер
+    command: python src/logger.py
+    # Прокидаємо USB-порт у контейнер
+    devices:
+      - "/dev/ttyUSB0:/dev/ttyUSB0"
+    # Підключаємо папки з даними та логами
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+
+  dashboard:
+    build: .
+    container_name: esp32_dashboard
+    # Прокидаємо порт для Streamlit (щоб ти міг зайти через браузер)
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
