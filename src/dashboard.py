@@ -9,7 +9,7 @@ st.title("🎛️ Кімната контролю ESP32")
 # Шлях до твоєї бази даних
 DB_PATH = "/home/astarion/Projects/esp32_air_control/data/climate_data.db"
 
-@st.cache_data(ttl=30)
+@st.cache_data(ttl=20)
 def load_data():
     try:
         conn = sqlite3.connect(DB_PATH)
