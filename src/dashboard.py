@@ -7,7 +7,7 @@ st.set_page_config(page_title="IoT Control Room", layout="wide")
 st.title("🎛️ Кімната контролю ESP32")
 
 # Шлях до твоєї бази даних
-DB_PATH = "/home/astarion/Projects/esp32_air_control/data/climate_data.db"
+DB_PATH = "/app/data/climate_data.db"
 
 @st.cache_data(ttl=20)
 def load_data():

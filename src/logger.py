@@ -5,7 +5,7 @@ import os
 import logging # Додаємо бібліотеку для логування
 
 # --- НАЛАШТУВАННЯ ЛОГУВАННЯ ---
-LOG_FILE = "/home/astarion/Projects/esp32_air_control/logs/server.log"
+LOG_FILE = "/app/logs/server.log"
 
 # Гарантуємо, що папка для логів існує, якщо раптом її немає
 os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
@@ -19,7 +19,7 @@ logging.basicConfig(
 
 PORT = "/dev/ttyUSB0"
 BAUD_RATE = 115200
-DB_PATH = "/home/astarion/Projects/esp32_air_control/data/climate_data.db"
+DB_PATH = "/app/data/climate_data.db"
 
 def init_db():
     """Ініціалізація бази даних та створення таблиці"""
