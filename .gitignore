@@ -4,4 +4,7 @@ logs/
 __pycache__/
 *.db
 *.log
+*.pkl
+*.h5
 .env
+*.png
