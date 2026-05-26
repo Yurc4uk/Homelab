@@ -9,8 +9,8 @@ st.set_page_config(page_title="IoT Control Room", layout="wide")
 st.title("🎛️ ESP32 Control Room")
 
 # Path to the SQLite database file
-# DB_PATH = "/app/data/climate_data.db" # Example path for deployment
-DB_PATH = "/home/spike/PycharmProjects/Projects/esp32_air_control/data/climate_data.db" # Local development path
+DB_PATH = "/app/data/climate_data.db" # Example path for deployment
+# DB_PATH = "/home/spike/PycharmProjects/Projects/esp32_air_control/data/climate_data.db" # Local development path
 MODEL_PATH = "src/temp_predictor_30m.pkl" # Path to the pre-trained model
 
 # Cache the model loading to avoid reloading on every rerun
